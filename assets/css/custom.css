@@ -1,0 +1,14 @@
+.main-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-menu__menu-box {
+    margin-left: auto; /* Pushes it to the right */
+}
+
+.main-menu__list {
+    display: flex;
+    gap: 20px; /* optional spacing between items */
+}
