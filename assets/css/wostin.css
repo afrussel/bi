@@ -18,7 +18,8 @@
 --------------------------------------------------------------*/
 :root {
   --wostin-font: 'DM Sans', sans-serif;
-  --wostin-font-two: 'Amatic SC', cursive;
+  --wostin-font-two: 'Open Sans', sans-serif;
+
   --wostin-reey-font: "reeyregular";
   --wostin-gray: #878986;
   --wostin-gray-rgb: 135, 137, 134;
@@ -260,8 +261,8 @@ ul {
 
 .section-title__title {
   margin: 0;
-  font-size: 50px;
-  line-height: 55px;
+  font-size: 42px;
+  line-height: 50px;
   font-weight: 700;
 }
 
@@ -1975,10 +1976,10 @@ ul {
 }
 
 .main-slider h2 {
-  font-size: 90px;
+  font-size: 60px;
   color: var(--wostin-white);
   font-weight: 700;
-  line-height: 110px;
+  line-height: 80px;
   margin-bottom: 43px;
   opacity: 0;
   visibility: hidden;
@@ -3939,7 +3940,7 @@ ul {
 }
 
 .project-one__title {
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 34px;
 }
@@ -4145,9 +4146,9 @@ ul {
 }
 
 .testimonial-one__title {
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 44px;
+  line-height: 24px;
 }
 
 .testimonial-one__text {
@@ -4195,7 +4196,7 @@ ul {
   right: -13px;
   bottom: -13px;
   content: "";
-  border: 2px solid var(--wostin-base);
+  /*border: 2px solid var(--wostin-base);*/
   border-radius: 50%;
 }
 
@@ -4676,11 +4677,11 @@ ul {
 }
 
 .footer-widget__title {
-  font-size: 34px;
+  font-size: 18px;
   color: var(--wostin-white);
-  line-height: 34px;
+  line-height: 32px;
   font-weight: 700;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 .footer-widget__links-list {
@@ -5209,10 +5210,10 @@ ul {
 }
 
 .manage-waste__title {
-  font-size: 70px;
+  font-size: 40px;
   color: var(--wostin-white);
   font-weight: 700;
-  line-height: 70px;
+  line-height: 60px;
 }
 
 .manage-waste__btn-box {
@@ -8146,9 +8147,9 @@ ul {
 }
 
 .page-header__inner h2 {
-  font-size: 60px;
+  font-size: 50px;
   color: var(--wostin-white);
-  line-height: 60px;
+  line-height: 50px;
   margin-bottom: 13px;
   font-weight: 700;
 }
@@ -10477,10 +10478,11 @@ ul {
 }
 
 .request-a-pickup-top__title {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 60px;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .request-a-pickup-top__text {
@@ -11426,9 +11428,9 @@ ul {
 }
 
 .faq-waste-pickup__title {
-  font-size: 60px;
+  font-size: 42px;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 50px;
   margin-bottom: 49px;
 }
 
