@@ -199,6 +199,7 @@ ul {
   font-size: 16px;
   font-weight: 700;
   padding: 17px 50px 16px;
+  margin-top: 5px;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   overflow: hidden;
@@ -259,8 +260,8 @@ ul {
 
 .section-title__title {
   margin: 0;
-  font-size: 60px;
-  line-height: 73px;
+  font-size: 50px;
+  line-height: 55px;
   font-weight: 700;
 }
 
@@ -1974,7 +1975,7 @@ ul {
 }
 
 .main-slider h2 {
-  font-size: 120px;
+  font-size: 90px;
   color: var(--wostin-white);
   font-weight: 700;
   line-height: 110px;
@@ -2745,8 +2746,8 @@ ul {
 }
 
 .leading-waste__text {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 40px;
   font-weight: 400;
 }
 
@@ -3813,8 +3814,7 @@ ul {
 .project-one {
   position: relative;
   display: block;
-  padding: 220px 0 90px;
-  margin-top: -105px;
+  padding: 100px 0 90px;
   z-index: 1;
 }
 
@@ -3922,7 +3922,7 @@ ul {
   background-color: white;
   -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
-  padding: 19px 30px 27px;
+  padding: 19px 17px 27px;
   margin-left: 30px;
   margin-right: 30px;
   margin-top: -55px;
@@ -4807,7 +4807,7 @@ ul {
 }
 
 .footer-widget__contact-content {
-  margin-left: 13px;
+  margin-left: 0;
 }
 
 .footer-widget__contact-mail-phone {
@@ -6558,7 +6558,7 @@ ul {
 .welcome {
   position: relative;
   display: block;
-  padding: 0 0 120px;
+  padding: 120px 0 120px;
 }
 
 .welcome__left {
