@@ -12,3 +12,20 @@
     display: flex;
     gap: 20px; /* optional spacing between items */
 }
+
+.projects-page.services .project-one__content {
+    padding: 19px 21px 27px;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 130px;
+}
+.projects-page.services .project-one__title {
+    font-size: 22px;
+    line-height: 27px;
+}
+.projects-page.services p.project-one__sub-title {
+    font-size: 14px;
+}
+.project-one__single.small-box .project-one__content {
+    padding-top: 35px;
+}
