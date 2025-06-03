@@ -9693,9 +9693,9 @@ ul {
 }
 
 .industy-details__title {
-  font-size: 60px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 30px;
   text-align: center;
 }
 
@@ -9804,7 +9804,7 @@ ul {
 .industy-details__commitment {
   position: relative;
   display: block;
-  padding: 0 0 120px;
+  padding: 0 0 50px;
 }
 
 .industy-details__commitment-img {
@@ -10080,7 +10080,7 @@ ul {
 .project-details {
   position: relative;
   display: block;
-  padding: 111px 0 0px;
+  padding: 80px 0 0px;
 }
 
 .project-details__top {
@@ -10164,7 +10164,7 @@ ul {
   position: relative;
   display: block;
   padding-top: 33px;
-  padding-bottom: 114px;
+  padding-bottom: 30px;
 }
 
 .project-details__img-box img {
@@ -10255,8 +10255,6 @@ ul {
   font-weight: 700;
   line-height: 34px;
   color: var(--wostin-base);
-  padding-top: 33px;
-  padding-bottom: 33px;
 }
 
 .project-details__content-text-3 {
@@ -10460,7 +10458,7 @@ ul {
 .pricing-page {
   position: relative;
   display: block;
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 /*--------------------------------------------------------------
@@ -11164,7 +11162,7 @@ ul {
 .gallery-page {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  padding: 20px 0 30px;
 }
 
 .gallery-page__single {

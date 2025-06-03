@@ -29,3 +29,61 @@
 .project-one__single.small-box .project-one__content {
     padding-top: 35px;
 }
+
+
+
+
+.contact-one__info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 35px;
+}
+.contact-one__info .icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-one__info .icon-placeholder {
+    font-size: 20px;
+}
+.contact-one__info p strong {
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.contact-item {
+    margin-bottom: 40px;
+}
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.contact-content .text {
+    flex: 1 1 45%;
+}
+.contact-content .map {
+    flex: 1 1 50%;
+}
+.contact-content iframe {
+    height: 350px;
+    width: 100%;
+    border: 0;
+}
+.contact-content .text p strong {
+    font-size: 28px;
+    display: block;
+}
+.contact-one__form {
+    padding: 0;
+    border: none;
+}
+.contact-one__info li .text p {
+    line-height: 25px;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
