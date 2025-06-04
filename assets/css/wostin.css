@@ -11200,7 +11200,7 @@ ul {
 
 .gallery-page__img img {
   width: 100%;
-  -webkit-transform: scale(1);
+ -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform 500ms ease;
   transition: -webkit-transform 500ms ease;
@@ -11247,8 +11247,8 @@ ul {
   border-radius: 50%;
   font-size: 22px;
   color: var(--wostin-black);
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
+ /*-webkit-transform: translateY(100px);
+          transform: translateY(100px);*/
   opacity: 0;
   -webkit-transition: all 700ms ease;
   transition: all 700ms ease;
@@ -11256,7 +11256,7 @@ ul {
 }
 
 .gallery-page__single:hover .gallery-page__icon a {
-  -webkit-transform: translateY(0px);
+ -webkit-transform: translateY(0px);
           transform: translateY(0px);
   opacity: 1;
 }
