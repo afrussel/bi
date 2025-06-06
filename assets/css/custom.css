@@ -122,3 +122,11 @@ h2.section-title__title.sub-title {
 h2.section-title__title.contact-subtitle {
     font-size: 32px;
 }
+
+
+@media (max-width: 767px) {
+    .main-menu__list {
+        display: unset;
+        gap: 0;
+    }
+}
