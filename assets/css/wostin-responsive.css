@@ -1640,7 +1640,7 @@
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1400px) and (max-width: 1730px) {
     .main-menu__menu-box {
-        width: 67%;
+        width: 70%;
     }
 
     .main-menu__menu-top {
@@ -1660,8 +1660,12 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .main-header__inner {
+        padding: 0 20px;
+    }
+
     .main-menu__menu-box {
-        width: 60%;
+        width: 80%;
     }
 
     .main-menu__menu-top {

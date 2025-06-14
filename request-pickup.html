@@ -128,107 +128,116 @@
                     </div>
                 </div>
                 <div class="request-a-pickup__tab-content-form-box">
-                    <form class="request-a-pickup__tab-content-form" method="post" action="https://www.exporttek.com/?page_id=31">
+                    <form id="pickupForm" method="post" action="pickup-form.php" novalidate>
                         <div class="row">
 
                             <!-- First & Last Name -->
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="First Name" name="et_pb_contact_first_name_0" required>
+                                    <label for="first_name">First Name *</label>
+                                    <input type="text" id="first_name" name="et_pb_contact_first_name_0" required>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="Last Name" name="et_pb_contact_last_name_0" required>
+                                    <label for="last_name">Last Name *</label>
+                                    <input type="text" id="last_name" name="et_pb_contact_last_name_0" required>
                                 </div>
                             </div>
 
-                            <!-- Company & Job Title -->
+                            <!-- Email & Phone -->
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="Company" name="et_pb_contact_company_0">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="et_pb_contact_email_0" required>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="Job Title" name="et_pb_contact_job_title_0">
-                                </div>
-                            </div>
-
-                            <!-- Phone & Email -->
-                            <div class="col-xl-6">
-                                <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="Phone Number" name="et_pb_contact_phone_number_0" pattern="[0-9\s\-]*" title="Only numbers allowed.">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="email" placeholder="Email" name="et_pb_contact_email_0" required>
+                                    <label for="phone">Phone</label>
+                                    <input type="text" id="phone" name="et_pb_contact_phone_number_0" pattern="[0-9\s\-]*" title="Only numbers allowed.">
                                 </div>
                             </div>
 
-                            <!-- Country & Postal -->
+                            <!-- Other Inputs -->
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="Country" name="et_pb_contact_country_0">
+                                    <label for="company">Company</label>
+                                    <input type="text" id="company" name="et_pb_contact_company_0">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="Postal" name="et_pb_contact_postal_0" pattern="[0-9\s\-]*" title="Only numbers allowed.">
+                                    <label for="job_title">Job Title</label>
+                                    <input type="text" id="job_title" name="et_pb_contact_job_title_0">
                                 </div>
                             </div>
-
-                            <!-- Business Description -->
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-input-box">
+                                    <label for="country">Country</label>
+                                    <input type="text" id="country" name="et_pb_contact_country_0">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-input-box">
+                                    <label for="postal">Postal</label>
+                                    <input type="text" id="postal" name="et_pb_contact_postal_0" pattern="[0-9\s\-]*">
+                                </div>
+                            </div>
                             <div class="col-xl-12">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="Describe Your Business" name="et_pb_contact_describe_your_business_0">
-                                </div>
-                            </div>
-
-                            <!-- Inventory & Product Type -->
-                            <div class="col-xl-6">
-                                <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="Current Inventory" name="et_pb_contact_current_inventory_0">
+                                    <label for="business">Describe Your Business</label>
+                                    <input type="text" id="business" name="et_pb_contact_describe_your_business_0">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="What Type of Products Do You Want to Buy?" name="et_pb_contact_what_type_of_products_do_you_want_to_buy?_0">
-                                </div>
-                            </div>
-
-                            <!-- Brands & Quantity -->
-                            <div class="col-xl-6">
-                                <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="What Brands?" name="et_pb_contact_what_brands?_0">
+                                    <label for="inventory">Current Inventory</label>
+                                    <input type="text" id="inventory" name="et_pb_contact_current_inventory_0">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-input-box">
-                                    <input type="text" placeholder="What Quantity?" name="et_pb_contact_what_quantity?_0">
+                                    <label for="product_type">Products You Want to Buy</label>
+                                    <input type="text" id="product_type" name="et_pb_contact_what_type_of_products_do_you_want_to_buy?_0">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-input-box">
+                                    <label for="brands">Brands</label>
+                                    <input type="text" id="brands" name="et_pb_contact_what_brands?_0">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-input-box">
+                                    <label for="quantity">Quantity</label>
+                                    <input type="text" id="quantity" name="et_pb_contact_what_quantity?_0">
                                 </div>
                             </div>
 
                             <!-- Message -->
                             <div class="col-xl-12">
-                                <div class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-message-box">
-                                    <textarea placeholder="How can we help you today?" name="et_pb_contact_message_0"></textarea>
+                                <div class="request-a-pickup__tab-content-input-box">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="et_pb_contact_message_0"></textarea>
                                 </div>
                             </div>
 
-                            <!-- Hidden Required Fields -->
-                            <input type="hidden" value="et_contact_proccess" name="et_pb_contactform_submit_0">
-                            <input type="hidden" id="_wpnonce-et-pb-contact-form-submitted-0" name="_wpnonce-et-pb-contact-form-submitted-0" value="dummy_nonce_here">
-                            <input type="hidden" name="_wp_http_referer" value="/?page_id=31">
+                            <!-- CAPTCHA -->
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-input-box">
+                                    <label for="captcha" class="captcha-text">Solve this to verify you're human: <span id="captcha-question" style="color: #f00; font-size: 18px"></span> ? *</label>
+                                    <input type="text" id="captcha" name="captcha" placeholder="Enter the result" required>
+                                    <input type="hidden" id="captcha-answer" name="captcha_answer">
+                                </div>
+                            </div>
 
-                            <!-- Submit Button -->
+                            <!-- Submit -->
+
                             <div class="col-xl-12">
-                                <div class="request-a-pickup__tab-content-btn-box">
-                                    <button type="submit" class="thm-btn request-a-pickup__tab-content-btn">Submit</button>
-                                </div>
+                                <button type="submit" class="thm-btn contact-one__btn">Submit</button>
+                                <div id="form-message" style="margin-top:30px; color: green; font-size: 18px"></div>
                             </div>
-
                         </div>
                     </form>
                 </div>
@@ -399,21 +408,6 @@
     </div>
     <!-- /.mobile-nav__wrapper -->
 
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="icon-magnifying-glass"></i>
-                </button>
-            </form>
-        </div>
-        <!-- /.search-popup__content -->
-    </div>
-    <!-- /.search-popup -->
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
@@ -442,12 +436,56 @@
     <script src="assets/vendors/timepicker/timePicker.js"></script>
 
 
-
-
     <!-- template js -->
     <script src="assets/js/wostin.js"></script>
+
+    <script>
+        function generateCaptcha() {
+            const a = Math.floor(Math.random() * 10 + 1);
+            const b = Math.floor(Math.random() * 10 + 1);
+            document.getElementById('captcha-question').innerText = `${a} + ${b}`;
+            document.getElementById('captcha-answer').value = a + b;
+        }
+
+        generateCaptcha();
+
+        const form = document.getElementById('pickupForm');
+        form.addEventListener('submit', function (e) {
+            if (!form.checkValidity()) {
+                e.preventDefault();
+                form.reportValidity();
+                return;
+            }
+
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const messageBox = document.getElementById('form-message');
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(result => {
+                    messageBox.style.color = result.includes('successfully') ? 'green' : 'red';
+                    messageBox.innerText = result;
+
+                    if (result.includes('successfully')) {
+                        form.reset();
+                        generateCaptcha();
+                    }
+                })
+                .catch(error => {
+                    messageBox.style.color = 'red';
+                    messageBox.innerText = 'An error occurred. Please try again.';
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+
 </body>
 
 
-<!-- Mirrored from pixydrops.com/wostin/main-html/request-pickup.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 May 2025 14:21:24 GMT -->
 </html>

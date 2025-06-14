@@ -138,7 +138,7 @@
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <span class="icon-message"></span>
+                                        <span class="icon-phone-call"></span>
                                     </div>
                                     <div class="text">
                                         <p>Call Anytime</p>
@@ -149,7 +149,7 @@
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <span class="icon-phone-call"></span>
+                                        <span class="icon-message"></span>
                                     </div>
                                     <div class="text">
                                         <p>Write Email</p>
@@ -161,17 +161,16 @@
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="contact-one__right">
-                            <form action="#"
-                                  class="contact-one__form contact-form-validated" novalidate="novalidate">
+                            <form id="contactForm" action="contact-form.php" method="POST" class="contact-one__form">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12">
                                         <div class="contact-one__form-input-box">
-                                            <input type="text" placeholder="Your name" name="name">
+                                            <input type="text" placeholder="Your name" name="name" required>
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12">
                                         <div class="contact-one__form-input-box">
-                                            <input type="email" placeholder="Email address" name="email">
+                                            <input type="email" placeholder="Email address" name="email" required>
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12">
@@ -181,18 +180,33 @@
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12">
                                         <div class="contact-one__form-input-box">
-                                            <input type="text" placeholder="Subject" name="subject">
+                                            <input type="text" placeholder="Subject" name="subject" required>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="contact-one__form-input-box text-message-box">
-                                            <textarea name="message" placeholder="Write message"></textarea>
+                                            <textarea name="message" placeholder="Write message" required></textarea>
                                         </div>
+
+                                        <!-- Captcha section -->
+                                        <div class="col-xl-12 col-lg-12 col-md-12">
+                                            <div class="contact-one__form-input-box">
+                                                <label for="captcha" class="captcha-text">Solve this to verify you're human: <span id="captcha-question" style="color: #f00; font-size: 18px"></span> ? *</label>
+                                                <input type="text" name="captcha" id="captcha" placeholder="Enter the result" required>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" id="captcha-answer" name="captcha_answer">
+
+
                                         <div class="contact-one__btn-box">
                                             <button type="submit" class="thm-btn contact-one__btn">Send a Message</button>
                                         </div>
+
+                                        <!-- Message will be shown here -->
+                                        <div id="form-message" style="margin-top:30px; color: green; font-size: 18px"></div>
                                     </div>
                                 </div>
                             </form>
@@ -379,21 +393,6 @@
     </div>
     <!-- /.mobile-nav__wrapper -->
 
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="icon-magnifying-glass"></i>
-                </button>
-            </form>
-        </div>
-        <!-- /.search-popup__content -->
-    </div>
-    <!-- /.search-popup -->
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
@@ -422,12 +421,50 @@
     <script src="assets/vendors/timepicker/timePicker.js"></script>
 
 
-
-
     <!-- template js -->
     <script src="assets/js/wostin.js"></script>
+
+
+    <script>
+        // Simple math captcha generator
+        function generateCaptcha() {
+            const a = Math.floor(Math.random() * 10 + 1);
+            const b = Math.floor(Math.random() * 10 + 1);
+            document.getElementById('captcha-question').innerText = `${a} + ${b}`;
+            document.getElementById('captcha-answer').value = a + b;
+        }
+        generateCaptcha();
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const messageBox = document.getElementById('form-message');
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(result => {
+                    messageBox.style.color = result.includes('successfully') ? 'green' : 'red';
+                    messageBox.innerText = result;
+                    if (result.includes('successfully')) form.reset();
+                    generateCaptcha(); // refresh captcha
+                })
+                .catch(error => {
+                    messageBox.style.color = 'red';
+                    messageBox.innerText = 'An error occurred. Please try again.';
+                    console.error('Error:', error);
+                    generateCaptcha(); // refresh captcha
+                });
+        });
+    </script>
+
+
 </body>
 
 
-<!-- Mirrored from pixydrops.com/wostin/main-html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 May 2025 14:23:33 GMT -->
+
 </html>

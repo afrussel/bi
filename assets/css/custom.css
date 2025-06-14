@@ -14,10 +14,12 @@
 }
 
 .projects-page.services .project-one__content {
-    padding: 19px 21px 27px;
+    padding: 40px 21px;
     margin-left: 10px;
     margin-right: 10px;
     min-height: 130px;
+    display: flex;
+    align-items: center;
 }
 .projects-page.services .project-one__title {
     font-size: 22px;
@@ -27,7 +29,7 @@
     font-size: 14px;
 }
 .project-one__single.small-box .project-one__content {
-    padding-top: 35px;
+    /*padding-top: 35px;*/
 }
 
 
@@ -121,6 +123,12 @@ h2.section-title__title.sub-title {
 }
 h2.section-title__title.contact-subtitle {
     font-size: 32px;
+}
+
+.captcha-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--wostin-black);
 }
 
 
